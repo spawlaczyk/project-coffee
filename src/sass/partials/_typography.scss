@@ -1,6 +1,6 @@
 h1 {
   font-family: $font;
-  font-size: 26px;
+  font-size: 34px;
   font-weight: $font-bold;
   text-transform: uppercase;
   color: $color-main;
@@ -8,7 +8,7 @@ h1 {
 
 h2 {
   font-family: $font;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: $font-bold;
   text-transform: uppercase;
   color: $color-dark;
@@ -16,8 +16,17 @@ h2 {
 
 h3 {
   font-family: $font;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: $font-semibold;
   text-transform: uppercase;
   color: $color-dark;
+}
+
+a {
+  text-decoration: none;
+  font-family: $font;
+  color: $color-light;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: $font-semibold;
 }

@@ -1,73 +1,71 @@
-.navbar {
-	justify-content: space-between;
-	align-items: center;
-  text-align: center;
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background.png");
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  padding: 15px 5px;
+}
 
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    font-family: $font;
-    text-transform: uppercase;
-    color: gray;
-    margin-right: 8px;
+.navbar {
+  display: flex;
+  justify-content: space-around;
+
+  .logo {
+    .logo-title {
+      text-align: left;
+      font-size: 34px;
+      letter-spacing: 12px;
+    }
+
+    .logo-title,
+    .logo-subtitle {
+      color: $color-light;
+      letter-spacing: 5px;
+    }
   }
 
-  h2 {
-    color: $color-light;
-    letter-spacing: 6px;
+  .nav-links {
+    a {
+      color: gray;
+      position: relative;
+      top: 50%;
+      padding: 0 10px;
+    }
+  }
+}
+
+.hero-inner {
+  width: 83em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+
+  .hero-title,
+  .hero-subtitle {
+    font-size: 110px;
+    letter-spacing: 17px;
   }
 
   .hero-title {
     text-align: left;
   }
-}
 
-.logo {
-  display: inline-block;
-  //margin-left: 50px;
-}
-
-.hero {
-  position: relative;
-  background-image: linear-gradient(rgba(4, 5, 10, 0.767), rgba(4, 5, 10, 0.767)), url('/images/background.png');
-  margin: 0;
-  padding: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
-  //background-position: center;
-	background-size: cover;
-}
-
-.hero-inner {
-  position: absolute;
-  left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
-  text-align: center;
-  max-width: 1140px;
-
-  h1 {
-    font-size: 102px;
-    letter-spacing: 10px;
+  .hero-subtitle {
+    text-align: right;
   }
 
-  .page-title {
-    text-align: justify;
-  }
-  .page-subtitle {
-    text-align: end;
-    position: relative;
-  }
-  .page-subtitle::after {
-    position: absolute;
-    background: $color-main;
-    content: '';
-    width: 20%;
-    height: 10px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: -80px;
+  .hero-button {
+    p {
+      font-family: $font;
+      font-size: 24px;
+      font-weight: $font-regular;
+      letter-spacing: 5px;
+      color: $color-light;
+      text-transform: uppercase;
+    }
   }
 }
