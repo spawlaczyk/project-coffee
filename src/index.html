@@ -52,6 +52,31 @@
     </section>
   </div>
 
+  <script id="template-home-page" type="text/x-handlebars-template"></script>
+
+  <script id="template-products-page" type="text/x-handlebars-template">
+    <article class="product">
+      <div class="product-description">
+        <h1 class="product-name">{{ title }}</h1>
+        <p class="description">{{ description }}</p>
+        <h2 class="roasting">roasting: {{ roasting }}/10</h2>
+        <h2 class="intensity">intensity: {{ intensity }}/10</h2>
+      </div>
+      <div class="product-image">
+        {{#each image}}
+        {{{this}}}
+        {{/each}}
+      </div>
+    </article>
+  </script>
+
+  <script id="template-contact-page" type="text/x-handlebars-template"></script>
+
+  <footer>
+    <h3>© 2021 <span>el tigre</span> inc.</h3>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/script.js" type="module"></script>
 </body>
 
