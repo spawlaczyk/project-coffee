@@ -1,83 +1,68 @@
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background.png");
   width: 100%;
-  height: 100vh;
-  position: relative;
   background-size: cover;
-  padding: 15px 55px;
+  padding: 30px 0;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-around;
 
-  .logo {
-    .logo-title {
-      text-align: left;
-      font-size: 34px;
-      letter-spacing: 12px;
-    }
+  h1 {
+    letter-spacing: 8px;
+  }
+  h3 {
+    letter-spacing: 3px;
+  }
 
-    .logo-title,
-    .logo-subtitle {
-      color: $color-light;
-      letter-spacing: 5px;
-    }
+  h1,
+  h3 {
+    color: $color-light;
+    text-align: left;
   }
 
   .nav-links {
+    text-align: right;
+
     a {
-      color: gray;
-      position: relative;
-      top: 50%;
-      padding: 0 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 8px;
+    color: gray;
     }
   }
 }
 
 .hero-inner {
-  width: 81em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 500px;
-
-  .hero-title,
-  .hero-subtitle {
-    font-size: 108px;
+  padding-top: 14%;
+  h1 {
+    font-size: 96px;
     letter-spacing: 16px;
   }
-
+  
   .hero-title {
     text-align: left;
+    transform: translateX(-3%);
   }
 
   .hero-subtitle {
     text-align: right;
-  }
-
-  .divider {
-    border: 3px solid $color-main;
-    width: 16em;
+    transform: translateX(3%);
   }
 
   .hero-button {
-    position: relative;
-    top: 50%;
+    padding-top: 22%;
 
     p {
-      font-family: $font;
-      font-size: 24px;
-      font-weight: $font-regular;
-      letter-spacing: 5px;
       color: $color-light;
+      font-size: 30px;
+      letter-spacing: 6px;
       text-transform: uppercase;
     }
 
     i {
-      font-size: 28px;
-      color: $color-light;      
+      font-size: 30px;
+      color: $color-light;
     }
   }
 }

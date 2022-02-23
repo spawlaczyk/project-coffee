@@ -14,28 +14,29 @@
 
 <body>
   <header class="hero">
-    <div class="navbar">
-      <div class="logo">
-        <h2 class="logo-title">
-          el tigre
-        </h2>
-        <h3 class="logo-subtitle">
-          venezuela coffee beans
-        </h3>
+    <div class="container">
+      <div class="navbar row">
+        <div class="logo col-lg-6">
+          <h1 class="logo-title">
+            el tigre
+          </h1>
+          <h3 class="logo-subtitle">
+            venezuela coffee beans
+          </h3>
+        </div>
+        <div class="nav-links col-lg-6">
+          <a href="#home">home</a>
+          <a href="#products">products</a>
+          <a href="#contact">contact</a>
+        </div>
       </div>
-      <div class="nav-links">
-        <a href="#home">home</a>
-        <a href="#products">products</a>
-        <a href="#contact">contact</a>
-      </div>
-    </div>
-    <div class="hero-inner">
-        <h1 class="hero-title">home of</h1>
-        <h1 class="hero-subtitle">original tastes</h1>
-        <hr class="divider">
-      <div class="hero-button">
-          <p>discover</p>
-          <i class="arrow-icon icon-down-circled2"></i>
+      <div class="hero-inner">
+          <h1 class="hero-title">home of</h1>
+          <h1 class="hero-subtitle">original tastes</h1>
+        <div class="hero-button">
+            <p>discover</p>
+            <i class="arrow-icon icon-down-circled2"></i>
+        </div>
       </div>
     </div>
   </header>
@@ -45,7 +46,11 @@
       <div class="home-wrapper container"></div>
     </section>
     <section id="products">
-      <div id="product-list" class="product-list container"></div>
+      <div id="product-list" class="product-list container">
+        <div class="title">
+          <h1>products</h1>
+        </div>
+      </div>
     </section>
     <section id="contact">
       <div class="contact-wrapper container"></div>
@@ -56,16 +61,20 @@
 
   <script id="template-products-page" type="text/x-handlebars-template">
     <article class="product">
-      <div class="product-description">
-        <h1 class="product-name">{{ title }}</h1>
-        <p class="description">{{ description }}</p>
-        <h2 class="roasting">roasting: {{ roasting }}/10</h2>
-        <h2 class="intensity">intensity: {{ intensity }}/10</h2>
-      </div>
-      <div class="product-image">
-        {{#each image}}
-        {{{this}}}
-        {{/each}}
+      <div class="product-box row">
+        <div class="product-description col-lg-6">
+          <h1 class="product-name">{{ title }}</h1>
+          <p class="description">{{ description }}</p>
+          <div class="rating">
+            <h3 class="roasting">roasting: <span>{{ roasting }}/10</span></h3>
+            <h3 class="intensity">intensity: <span>{{ intensity }}/10</span></h3>
+          </div>
+        </div>
+        <div class="product-image col-lg-6">
+          {{#each image}}
+          {{{this}}}
+          {{/each}}
+        </div>
       </div>
     </article>
   </script>
