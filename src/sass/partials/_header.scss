@@ -6,10 +6,10 @@
 }
 
 .navbar {
-
   h1 {
     letter-spacing: 8px;
   }
+
   h3 {
     letter-spacing: 3px;
   }
@@ -24,17 +24,18 @@
     text-align: right;
 
     a {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 8px;
-    color: gray;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 8px;
+      color: gray;
     }
   }
 }
 
 .hero-inner {
   padding-top: 14%;
+
   h1 {
     font-size: 96px;
     letter-spacing: 16px;
@@ -50,6 +51,17 @@
     transform: translateX(3%);
   }
 
+  span::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translateX(-50%);
+    background: $color-main;
+    width: 250px;
+    height: 5px;
+  }
+ 
   .hero-button {
     padding-top: 22%;
 

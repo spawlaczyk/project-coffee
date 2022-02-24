@@ -33,6 +33,7 @@
       <div class="hero-inner">
           <h1 class="hero-title">home of</h1>
           <h1 class="hero-subtitle">original tastes</h1>
+          <span></span>
         <div class="hero-button">
             <p>discover</p>
             <i class="arrow-icon icon-down-circled2"></i>
@@ -57,7 +58,26 @@
     </section>
   </div>
 
-  <script id="template-home-page" type="text/x-handlebars-template"></script>
+  <script id="template-home-page" type="text/x-handlebars-template">
+    <article class="product">
+      <div class="product-box row">
+        <div class="product-description col-lg-6">
+          <h1 class="product-name">{{ title }}</h1>
+          <p class="description">{{ description }}</p>
+          <hr class="divider>">
+          <div class="rating">
+            <h3 class="roasting">roasting: <span>{{ roasting }}/10</span></h3>
+            <h3 class="intensity">intensity: <span>{{ intensity }}/10</span></h3>
+          </div>
+        </div>
+        <div class="product-image col-lg-6">
+          {{#each image}}
+          {{{this}}}
+          {{/each}}
+        </div>
+      </div>
+    </article>
+  </script>
 
   <script id="template-products-page" type="text/x-handlebars-template">
     <article class="product">
@@ -65,6 +85,7 @@
         <div class="product-description col-lg-6">
           <h1 class="product-name">{{ title }}</h1>
           <p class="description">{{ description }}</p>
+          <hr class="divider>">
           <div class="rating">
             <h3 class="roasting">roasting: <span>{{ roasting }}/10</span></h3>
             <h3 class="intensity">intensity: <span>{{ intensity }}/10</span></h3>
