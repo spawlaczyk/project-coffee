@@ -2,24 +2,26 @@ import { templates, select } from './settings.js';
 import utils from './utils.js';
 
 class Home {
-  constructor(homeContainer){
+  constructor(id, data){
     const thisHome = this;
 
-    thisHome.renderInMenu(homeContainer);
+    thisHome.id = id;
+    thisHome.data = data;
+
+    thisHome.render();
   }
 
-  
-
-  renderInMenu(){
+  render(){
     const thisHome = this;
 
     const generatedHTML = templates.homePage(thisHome.data);
 
     thisHome.element = utils.createDOMFromHTML(generatedHTML);
 
-    const containerHome = document.querySelector(select.containerOf.home);
+    const listContainer = document.querySelector(select.containerOf.homeProductList);
+    console.log(listContainer);
 
-    containerHome.appendChild(thisHome.element);
+    listContainer.appendChild(thisHome.element);
   }
 }
 

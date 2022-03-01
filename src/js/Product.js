@@ -7,10 +7,10 @@ class Product {
     thisProduct.id = id;
     thisProduct.data = data;
 
-    thisProduct.renderInMenu();
+    thisProduct.render();
   }
 
-  renderInMenu(){
+  render(){
     const thisProduct = this;
 
     const generatedHTML = templates.productsPage(thisProduct.data);

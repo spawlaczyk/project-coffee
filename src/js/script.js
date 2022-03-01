@@ -54,6 +54,14 @@ const app = {
     }
   },
 
+  initHome: function(){
+    const thisApp = this;
+
+    for(let productData in thisApp.data.products){
+      new Home(thisApp.data.products[productData].id, thisApp.data.products[productData]);
+    }
+  },
+
   initData: function () {
     const thisApp = this;
 
@@ -65,16 +73,9 @@ const app = {
       })
       .then((parsedResponse) => {
         this.data.products = parsedResponse;
-        thisApp.initHome();
         thisApp.initMenu();
+        thisApp.initHome();
       });
-  },
-
-  initHome: function(){
-    const thisApp = this;
-
-    thisApp.homeContainer = document.querySelector(select.containerOf.home);
-    thisApp.home = new Home(thisApp.homeContainer);
   },
 
   init: function () {
@@ -82,7 +83,6 @@ const app = {
 
     thisApp.initPages();
     thisApp.initData();
-    thisApp.initHome();
   },
 };
 
