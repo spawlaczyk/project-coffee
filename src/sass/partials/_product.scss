@@ -68,8 +68,10 @@
   }
 
   .product-image {
+    padding: 8px;
+
     img {
-      box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px;
+      box-shadow: 0 0 2em rgb(100, 100, 100);
       width: 533px;
       height: 422px;
     }
@@ -78,6 +80,7 @@
 
 article:nth-child(3){
   flex-direction: column;
+
   .product-description {
     order: 2;
     padding-left: 7%;

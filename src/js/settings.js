@@ -9,6 +9,7 @@ export const select = {
     home: '.home-wrapper',
     products: '.product-list',
     contact: '.contact-wrapper',
+    pages: '#pages',
   },
 
   nav: {

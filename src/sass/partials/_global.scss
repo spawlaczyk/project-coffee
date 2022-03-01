@@ -8,3 +8,13 @@ body {
   line-height: .5;
   overflow-x: hidden;
 }
+
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}

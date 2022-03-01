@@ -1,0 +1,45 @@
+.about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.774)), url('/images/about-us.jpg');
+  background-size: cover;
+  width: 100%;
+  padding: 50px 50px;
+
+  .about-text {
+    margin: 0 auto;
+    line-height: 1.5;
+    width: 900px;
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: 9px;
+      margin-bottom: 110px;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 100px);
+      width: 770px;
+      height: 5px;
+      background: $color-main;
+    }
+
+    p {
+      margin-top: 20px;
+      padding-right: 15%;
+      font-size: 34px;
+      color: $color-light;
+      font-style: italic;
+      letter-spacing: 2px;
+      text-align: left;
+      width: 850px;
+    }
+
+    .subtext {
+      width: 1000px;
+      text-align: right;
+    }
+  }
+}
+
