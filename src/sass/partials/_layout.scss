@@ -1,11 +1,11 @@
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1140px;
+  max-width: 1200px;
 }
 
 footer {
-  height: 80px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,4 +18,23 @@ footer {
       text-transform: uppercase;
     }
   }
+}
+
+.title {
+  margin: 75px 0 75px 0;
+
+  h1 {
+    font-size: 55px;
+    letter-spacing: 12px;
+  }
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 5px;
+  background: $color-main;
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Tigre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +46,10 @@
   <div id="pages">
     <section id="home">
       <div class="home-wrapper container">
-        <div class="home-product-list"></div>
+        <div class="title">
+          <h1>products</h1>
+        </div>
+        <div class="home-product-list list"></div>
       </div>
       <section class="about">
         <div class="about-text">
@@ -57,14 +61,29 @@
       </section>
     </section>
     <section id="products">
-      <div id="product-list" class="product-list container">
-        <div class="title">
-          <h1>products</h1>
-        </div>
+      <div class="title">
+        <h1>products</h1>
+      </div>
+      <div id="product-list list" class="product-list container">
       </div>
     </section>
     <section id="contact">
-      <div class="contact-wrapper container"></div>
+      <div class="contact-wrapper container">
+        <div class="title">
+          <h1>contact us</h1>
+        </div>
+        <form>
+          <label for="name">name</label>
+          <input type="text" maxlength="20" required>
+          <label for="title">title</label>
+          <input type="text" maxlength="20" required>
+          <label for="message">message</label>
+          <textarea rows="5" maxlength="400" required></textarea>
+          <div class="button">
+            <button type="submit">submit</button>
+          </div>
+        </form>
+      </div>
     </section>
   </div>
 
@@ -73,12 +92,17 @@
       <div class="product-box row">
         <div class="product-description col-lg-6">
           <h1 class="product-name">{{ title }}</h1>
-          <p class="description">{{ description }}</p>
-          <hr class="divider>">
-          <div class="rating">
-            <h3 class="roasting">roasting: <span>{{ roasting }}/10</span></h3>
-            <h3 class="intensity">intensity: <span>{{ intensity }}/10</span></h3>
+          <div class="description-box row">
+            <p class="border col-2"></p>
+            <p class="description col-10">{{ description }}</p>
           </div>
+          <div class="rating row">
+            <div class="rating-text col-5">
+              <h3 class="roasting">roasting: <span>{{ roasting }}/10</span></h3>
+              <h3 class="intensity">intensity: <span>{{ intensity }}/10</span></h3>
+            </div>
+            <div class="most-popular col-5">{{{ most-popular }}}</div>
+          </div>          
         </div>
         <div class="product-image col-lg-6">
           {{#each image}}
@@ -94,12 +118,17 @@
       <div class="product-box row">
         <div class="product-description col-lg-6">
           <h1 class="product-name">{{ title }}</h1>
-          <p class="description">{{ description }}</p>
-          <hr class="divider>">
-          <div class="rating">
-            <h3 class="roasting">roasting: <span>{{ roasting }}/10</span></h3>
-            <h3 class="intensity">intensity: <span>{{ intensity }}/10</span></h3>
+          <div class="description-box row">
+            <p class="border col-2"></p>
+            <p class="description col-10">{{ description }}</p>
           </div>
+          <div class="rating row">
+            <div class="rating-text col-5">
+              <h3 class="roasting">roasting: <span>{{ roasting }}/10</span></h3>
+              <h3 class="intensity">intensity: <span>{{ intensity }}/10</span></h3>
+            </div>
+            <div class="most-popular col-5">{{{ most-popular }}}</div>
+          </div>          
         </div>
         <div class="product-image col-lg-6">
           {{#each image}}
