@@ -51,14 +51,15 @@
     transform: translateX(3%);
   }
 
-  span::after {
+  .hero-subtitle::after {
     content: '';
+    margin: 0 auto;
     position: absolute;
-    left: 50%;
-    bottom: 35%;
+    left: 47%;
+    bottom: -100px;
     transform: translateX(-50%);
     background: $color-main;
-    width: 250px;
+    width: 200px;
     height: 5px;
   }
  

@@ -71,8 +71,9 @@
       margin: 5px 0 5px 0;
     }
 
-    span::after {
-      bottom: 50%;
+    .hero-subtitle::after {
+      left: 50%;
+      bottom: -30px;
       width: 150px;
     }
 
