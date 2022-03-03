@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>El Tigre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
   <header class="hero">
     <div class="container">
       <div class="navbar row">
-        <div class="logo col-lg-6">
+        <div class="logo col-2 col-lg-6">
           <h1 class="logo-title">
             el tigre
           </h1>
@@ -25,16 +25,16 @@
             venezuela coffee beans
           </h3>
         </div>
-        <div class="nav-links col-lg-6">
+        <div class="nav-links col-8 col-lg-6">
           <a href="#home">home</a>
           <a href="#products">products</a>
           <a href="#contact">contact</a>
         </div>
       </div>
       <div class="hero-inner">
-          <h1 class="hero-title">home of</h1>
-          <h1 class="hero-subtitle">original tastes</h1>
-          <span></span>
+        <h1 class="hero-title">home of</h1>
+        <h1 class="hero-subtitle">original tastes</h1>
+        <span></span>
         <div class="hero-button">
             <p>discover</p>
             <i class="arrow-icon icon-down-circled2"></i>
@@ -52,8 +52,10 @@
         <div class="home-product-list list"></div>
       </div>
       <section class="about">
-        <div class="about-text">
+        <div class="title">
           <h1>about us</h1>
+        </div>
+        <div class="about-text">
           <p>Who are we? Just a bunch of friends with a love for a good coffee and desire to create something new, something original.</p>
           <p>Our coffees reflect us - young, wild and free. We are on the journey of new tastes...</p>
           <p class="subtext">Join us!</p>
@@ -90,7 +92,7 @@
   <script id="template-home" type="text/x-handlebars-template">
     <article class="product">
       <div class="product-box row">
-        <div class="product-description col-lg-6">
+        <div class="product-description col-12 col-lg-6">
           <h1 class="product-name">{{ title }}</h1>
           <div class="description-box row">
             <p class="border col-2"></p>
@@ -104,7 +106,7 @@
             <div class="most-popular col-5">{{{ most-popular }}}</div>
           </div>          
         </div>
-        <div class="product-image col-lg-6">
+        <div class="product-image col-12 col-lg-6">
           {{#each image}}
           {{{this}}}
           {{/each}}
