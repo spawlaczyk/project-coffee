@@ -201,7 +201,7 @@
     line-height: 1;
     .hero-title,
     .hero-subtitle {
-      font-size: 55px;
+      font-size: 45px;
       letter-spacing: 16px;
       text-align: center;
       transform: translate(0);
@@ -228,7 +228,7 @@
 
   .title {
     h1 {
-      font-size: 70px;
+      font-size: 45px;
       letter-spacing: 8px;
     }
   }
@@ -238,7 +238,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 500px;
+    width: 350px;
     height: 5px;
     background: $color-main;
   }
@@ -268,11 +268,14 @@
 
   .about {
     .about-text {
+      margin: 0;
       .subtext {
-        text-align: left;
+        width: 100%;
       }
     }
   }
+
+  
 
   form {
     input,
